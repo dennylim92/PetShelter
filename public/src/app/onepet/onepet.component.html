@@ -1,0 +1,21 @@
+<div>
+  <a [routerLink]="['/pets']">Home</a>
+  <h3>Details about {{ onePet.name }}</h3>
+  <br>
+  <h5>Pet type:</h5>
+  <p>{{ onePet.type }}</p>
+  <br>
+  <h5>Description:</h5>
+  <p>{{ onePet.description }}</p>
+  <br>
+  <h5>Skills:</h5>
+    <br>
+    <p>{{ onePet.skill1 }}</p>
+    <p>{{ onePet.skill2 }}</p>
+    <p>{{ onePet.skill3 }}</p>
+  <br>
+  <button (click)="removePet(onePet._id)" type="button" class="btn btn-outline-secondary" ngbTooltip="Adopt me!"
+  tooltipClass="my-custom-class">
+  Adopt this pet!
+  </button>
+</div>

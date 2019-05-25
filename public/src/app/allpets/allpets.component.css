@@ -1,0 +1,24 @@
+div {
+  height: 500px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+table {
+  border-collapse: collapse;
+  width:50%;
+  margin: 0 auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: #d8d6d6;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}

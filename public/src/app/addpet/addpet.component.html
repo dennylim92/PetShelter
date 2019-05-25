@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <h3>Know of a pet needing a home?</h3>
+  <form>
+    <div style="color: red;" *ngIf="name.touched && name.invalid">Name must be at least 3 characters</div>
+    Pet name: <input type="text" name="name" ngModel minlength="3" #name="ngModel" [(ngModel)]="newPet.name">
+    <br>
+    <br>
+    <div style="color: red;" *ngIf="type.touched && type.invalid">Type must be at least 3 characters</div>
+    Pet type: <input type="text" ngModel minlength="3" #type="ngModel" name="type" [(ngModel)]="newPet.type">
+    <br>
+    <br>
+    <div style="color: red;" *ngIf="description.touched && description.invalid">Description must be at least 3 characters</div>
+    Description: <input type="text" ngModel minlength="3" #description="ngModel" name="description" [(ngModel)]="newPet.description">
+    <br>
+    <h4>Skills:</h4>
+    Skill 1: <input type="text" name='skill1' [(ngModel)]="newPet.skill1" >
+    <br>
+    Skill 2: <input type="text" name='skill2' [(ngModel)]="newPet.skill2" >
+    <br>
+    Skill 3: <input type="text" name='skill3' [(ngModel)]="newPet.skill3" >
+    <br>
+    <br>
+    <button (click)="addPet()" type="button" class="btn btn-outline-secondary"
+    tooltipClass="my-custom-class">
+    Add pet
+    </button>
+    <button [routerLink]="['/pets']" type="button" class="btn btn-outline-secondary"
+    tooltipClass="my-custom-class">
+    Cancel
+    </button>
+  </form>
+</div>
