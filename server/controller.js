@@ -4,9 +4,9 @@ const path = require('path')
 
 module.exports = {
 
-  home: (req, res) => {
-    res.json();
-  },
+  // home: (req, res) => {
+  //   res.json();
+  // },
 
   showAll: async (req, res) => {
     const allPet = await Pet.find({}).sort({'type': 1})
@@ -24,12 +24,6 @@ module.exports = {
     const updatePet = await Pet.findByIdAndUpdate({_id: req.params.id}, req.body)
       .catch(err => console.error('error ->', err));
     res.json(updatePet);
-  },
-
-  addSkill: async (req, res) => {
-    const newPet = await Pet.create(req.body)
-      .catch(err => console.error('error ->', err));
-    res.json(newPet);
   },
 
   delete: async (req, res) => {
