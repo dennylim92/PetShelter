@@ -4,10 +4,6 @@ const path = require('path')
 
 module.exports = {
 
-  // home: (req, res) => {
-  //   res.json();
-  // },
-
   showAll: async (req, res) => {
     const allPet = await Pet.find({}).sort({'type': 1})
       .catch(err => console.error('error ->', err));
